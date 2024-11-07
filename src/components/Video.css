@@ -1,0 +1,33 @@
+#videoContainer {
+  width: 1920px;
+  height: 1129px;
+  border-radius: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+video {
+  border-radius: 28px;
+  width: 1881px;
+  height: 1080px;
+  z-index: 1;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#logoVideo {
+  margin-top: -100px;   
+  margin-left:  -125em;
+  width: 610px;
+  height: 478px;
+  position: absolute;
+  z-index: 2;
+}
