@@ -7,7 +7,7 @@ import Footer from "../components/Footer";
 function LandingPage() {
     return (
       <>
-        <Header title1="Ubication" title2="About of the chef"/>
+        <Header title1="Ubication" title2="About the chef"/>
         <Video />
         <Reserve title='Reservation' subtitle='To make the reservation you will be redirected to the page www.tableall.com.' buttonContent='GO TO RESERVE' />
         <KniveShop title='Teruknives' subtitle='Teruzushi Official Japanese Knife Store' buttonContent='GO TO SHOP' />
