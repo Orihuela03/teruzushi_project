@@ -55,7 +55,6 @@ const UbicationRestaurant: React.FC<UbicationRestaurantProps> = ({
         </div>
       </section>
       <section id="teruzushiRiyadh">
-
         <div className="restaurant_container">
           <div className="restaurant_text">
             <h1>{title3}</h1>

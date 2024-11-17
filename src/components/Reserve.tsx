@@ -15,8 +15,8 @@ const Reserve: React.FC<ReserveProps> = ({ title, subtitle, buttonContent }) => 
       </section>
       <section id="reserveSection">
         <div id="textContainer">
-          <h1>{title}</h1>
-          <a>{subtitle}</a>
+          <h1 id="text3">{title}</h1>
+          <a id="subtext2">{subtitle}</a>
         </div>
         <button>
           <a href="#">{buttonContent}</a>

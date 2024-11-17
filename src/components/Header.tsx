@@ -16,7 +16,7 @@ const Header: React.FC<HeaderProps> = ({ title1, title2 }) => {
             <a href="/Ubication">{title1}</a>
           </li>
           <li>
-            <a href="#">{title2}</a>
+            <a href="/AboutTheChef">{title2}</a>
           </li>
         </ul>
       </section>

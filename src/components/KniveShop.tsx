@@ -15,8 +15,8 @@ const KniveShop: React.FC<kniveShopProps> = ({ title, subtitle, buttonContent })
       </section>
       <section id="buttonContainer">
         <div id="textContainer">
-          <h1>{title}</h1>
-          <a>{subtitle}</a>
+          <h1 id="text2">{title}</h1>
+          <a id="subtext1">{subtitle}</a>
         </div>
         <button>
           <a href="#">{buttonContent}</a>

@@ -12,7 +12,7 @@ const UbicationPage: React.FC<UbicationPageProps> = ({ title }) => {
     <>
       <Header title1="Ubication" title2="About the chef" />
       <div id="titleContainer">
-        <h1>{title}</h1>
+        <h1 id="text4">{title}</h1>
       </div>
       <UbicationRestaurant
         title1="Teruzushi"

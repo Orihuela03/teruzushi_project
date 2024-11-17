@@ -1,0 +1,27 @@
+@import url('../assets/fonts/font.css');
+@import url('https://fonts.googleapis.com/css2?family=Joti+One&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+  margin: 0;
+}
+
+.titleContainer {
+    width: 980px;
+    height: 127px;
+    background-color: #A00000;
+    border-radius: 28px;
+    margin: 20px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+  }
+  
+  .text1 {
+    font-family: 'Joti One', cursive;    
+    font-weight: bold;
+    font-size: 75px;
+    color: #ffffff;
+    margin-bottom: 15px;
+  }

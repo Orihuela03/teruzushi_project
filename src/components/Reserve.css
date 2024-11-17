@@ -45,7 +45,7 @@ body {
   align-items: center;
 }
 
-#textContainer h1 {
+#text3 {
   text-decoration: none;
   font-family: 'Josefin Sans';
   font-weight: bold;
@@ -53,7 +53,7 @@ body {
   color: #ffffff;
 }
 
-#textContainer a {
+#subtext2 {
   text-decoration: none;
   font-family: 'Josefin Sans';
   font-weight: lighter;
