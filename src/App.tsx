@@ -13,7 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/Ubication" element={<UbicationPage title="Where is the restaurant?" />} />
-        <Route path="/AboutTheChef" element={<AboutTheChef title="Who is the chef?" />} />
+        <Route path="/AboutTheChef" element={<AboutTheChef title="Who is the chef?" subtitle="Highlights"/>} />
       </Routes>
     </Router>
     </>

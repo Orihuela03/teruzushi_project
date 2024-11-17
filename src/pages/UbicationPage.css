@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Joti+One&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
   margin: 0;
@@ -18,7 +18,7 @@ body {
 }
 
 #text4 {
-  font-family: "Josefin Sans";
+  font-family: "Joti One";
   font-weight: bold;
   font-size: 75px;
   color: #ffffff;
