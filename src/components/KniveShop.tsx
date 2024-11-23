@@ -7,11 +7,15 @@ interface kniveShopProps {
   buttonContent: string;
 }
 
-const KniveShop: React.FC<kniveShopProps> = ({ title, subtitle, buttonContent }) => {
+const KniveShop: React.FC<kniveShopProps> = ({
+  title,
+  subtitle,
+  buttonContent,
+}) => {
   return (
     <div id="shopContainer">
       <section id="imageContainer">
-        <img id="imageShop" src="../../public/image_shop.svg"/>
+        <img id="imageShop" src="../../public/image_shop.svg" />
       </section>
       <section id="buttonContainer">
         <div id="textContainer">
@@ -23,7 +27,7 @@ const KniveShop: React.FC<kniveShopProps> = ({ title, subtitle, buttonContent })
         </button>
       </section>
       <section id="logoContainer">
-        <img id="logoShop" src="../../public/logo_shop.svg"/>
+        <img id="logoShop" src="../../public/logo_shop.svg" />
       </section>
     </div>
   );

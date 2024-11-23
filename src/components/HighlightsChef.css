@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap");
+
+body {
+  margin: 0;
+}
+
+#highlightsChefContainer {
+  width: 1920px;
+  height: 1475px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#year2024 {
+  width: 1724px;
+  height: 166px;
+  background-color: #616161;
+  border-radius: 28px;
+}
+
+#year2023 {
+  width: 1724px;
+  height: 406px;
+  background-color: #a00000;
+  border-radius: 28px;
+}
+
+#year2022 {
+  width: 1724px;
+  height: 343px;
+  background-color: #616161;
+  border-radius: 28px;
+}
+
+#year2021 {
+  width: 1724px;
+  height: 164px;
+  background-color: #a00000;
+  border-radius: 28px;
+}
+
+#year2020 {
+  width: 1724px;
+  height: 285px;
+  background-color: #616161;
+  border-radius: 28px;
+}
+
+.Year {
+  font-family: "Josefine Sans";
+  font-size: 40px;
+  font-style: bold;
+  color: white;
+  margin-left: 40px;
+  margin-bottom: -20px;
+}
+
+.HighlightsInformation {
+  font-family: "Josefine Sans";
+  font-size: 32px;
+  color: white;
+  width: 1500px;
+  display: flex;
+  margin-top: 40px;
+  margin-left: 40px;
+  margin-bottom: -20px;
+}
+
+.Month {
+  min-width: 150px;
+}
+
+.CountryImage {
+  margin-left: 100px;
+}
+
+.HighlightsText {
+  margin-left: 100px;
+}

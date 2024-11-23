@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Joti+One&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap");
 
 body {
   margin: 0;
@@ -6,7 +7,7 @@ body {
 
 #reserveContainer {
   display: flex;
-  width: 1920px;
+  width: 100%;
   height: 539px;
   gap: 20px;
 }
@@ -19,7 +20,7 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 28px;
- margin-left: 20px;
+  margin-left: 20px;
 }
 
 #logoRedSquare {
@@ -47,7 +48,7 @@ body {
 
 #text3 {
   text-decoration: none;
-  font-family: 'Josefin Sans';
+  font-family: "Joti One";
   font-weight: bold;
   font-size: 85px;
   color: #ffffff;
@@ -55,7 +56,7 @@ body {
 
 #subtext2 {
   text-decoration: none;
-  font-family: 'Josefin Sans';
+  font-family: "Josefin Sans";
   font-weight: lighter;
   font-size: 20px;
   margin-top: -70px;

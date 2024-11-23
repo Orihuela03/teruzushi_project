@@ -18,7 +18,7 @@ const UbicationRestaurant: React.FC<UbicationRestaurantProps> = ({
   title2,
   subtitle2,
   title3,
-  subtitle3
+  subtitle3,
 }) => {
   return (
     <div id="contentContainer">
@@ -30,7 +30,9 @@ const UbicationRestaurant: React.FC<UbicationRestaurantProps> = ({
           </div>
           <div className="button_container">
             <button>
-              <a href="https://maps.app.goo.gl/E6q7VTS41cXgbzSF7">{buttonContent}</a>
+              <a href="https://maps.app.goo.gl/E6q7VTS41cXgbzSF7">
+                {buttonContent}
+              </a>
             </button>
           </div>
         </div>
@@ -46,7 +48,9 @@ const UbicationRestaurant: React.FC<UbicationRestaurantProps> = ({
           </div>
           <div className="button_container">
             <button>
-              <a href="https://maps.app.goo.gl/GeEj5Z3xCjSbeEyPA">{buttonContent}</a>
+              <a href="https://maps.app.goo.gl/GeEj5Z3xCjSbeEyPA">
+                {buttonContent}
+              </a>
             </button>
           </div>
         </div>
@@ -62,7 +66,9 @@ const UbicationRestaurant: React.FC<UbicationRestaurantProps> = ({
           </div>
           <div className="button_container">
             <button>
-              <a href="https://maps.app.goo.gl/YQKXmDJ9pY8B3u5f8">{buttonContent}</a>
+              <a href="https://maps.app.goo.gl/YQKXmDJ9pY8B3u5f8">
+                {buttonContent}
+              </a>
             </button>
           </div>
         </div>

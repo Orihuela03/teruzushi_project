@@ -1,5 +1,5 @@
 #videoContainer {
-  width: 1920px;
+  width: 100%;
   height: 1129px;
   border-radius: 28px;
   display: flex;
@@ -24,8 +24,8 @@ section {
 }
 
 #logoVideo {
-  margin-top: -100px;   
-  margin-left:  -125em;
+  margin-top: -100px;
+  margin-left: -125em;
   width: 610px;
   height: 478px;
   position: absolute;

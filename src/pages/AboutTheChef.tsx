@@ -1,6 +1,7 @@
 import Header from "../components/Header";
 import ChefInformation from "../components/ChefInformation";
 import Footer from "../components/Footer";
+import HighlightsChef from "../components/HighlightsChef";
 import "./AboutTheChef.css";
 
 interface AboutTheChefProps {
@@ -22,6 +23,28 @@ const AboutTheChef: React.FC<AboutTheChefProps> = ({ title, subtitle }) => {
       <div className="titleContainer">
         <h1 className="text1">{subtitle}</h1>
       </div>
+      <HighlightsChef
+        January="January"
+        Highlight1="Kindai University featured in front-page newspaper advertisement."
+        Highlight2="Attended Madrid Fusion in Spain and appeared as a speaker."
+        May="May"
+        Highlight3="TERUZUSHI Riyadh opened in Saudi Arabia."
+        September="September"
+        Highlight4="Invited as F1 Singapore GP executive sushi chef."
+        November="November"
+        Highlight5="Attended the Turkish Culinary Institute Gastromasa as a speaker."
+        Highlight6="Serving sushi to the president of the country and his family."
+        August="August"
+        Highlight7="Opened Teruzushi TOKYO in Akasaka, Tokyo."
+        Highlight8="Served as EX sushi chef at Milan Collection Moncler 70th anniversary event."
+        Highlight9="Pop-up in Sydney, Australia."
+        December="December"
+        Highlight10="Riyadh season 2 week pop-up due to offer from Saudi Arabian government."
+        Highlight11="Appeared on TV Asahi's I brought Mr. Rare."
+        Highlight12="Mastercard NY Times front page ad."
+        Highlight13="Invited to the Grammy Awards and walked the red carpet."
+        Highlight14="Ministry of Agriculture, Forestry and Fisheries Culinary Masters Award."
+      />
       <Footer />
     </>
   );

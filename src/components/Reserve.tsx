@@ -7,7 +7,11 @@ interface ReserveProps {
   buttonContent: string;
 }
 
-const Reserve: React.FC<ReserveProps> = ({ title, subtitle, buttonContent }) => {
+const Reserve: React.FC<ReserveProps> = ({
+  title,
+  subtitle,
+  buttonContent,
+}) => {
   return (
     <div id="reserveContainer">
       <section id="redSquare">
