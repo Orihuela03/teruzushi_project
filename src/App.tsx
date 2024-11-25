@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
 import UbicationPage from "./pages/UbicationPage";
 import AboutTheChef from "./pages/AboutTheChef";
+import ReservePage from "./pages/reservePage";
 
 function App() {
   return (
@@ -19,6 +20,10 @@ function App() {
             element={
               <AboutTheChef title="Who is the chef?" subtitle="Highlights" />
             }
+          />
+          <Route
+            path="/Reserve"
+            element={<ReservePage title1="Reservation" title2="Most Request Dishes" />}
           />
         </Routes>
       </Router>

@@ -17,6 +17,7 @@ video {
 }
 
 section {
+  border-radius: 28px;
   display: flex;
   justify-content: center;
   align-items: center;

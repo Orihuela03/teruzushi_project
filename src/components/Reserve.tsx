@@ -23,7 +23,7 @@ const Reserve: React.FC<ReserveProps> = ({
           <a id="subtext2">{subtitle}</a>
         </div>
         <button>
-          <a href="#">{buttonContent}</a>
+          <a href="/Reserve">{buttonContent}</a>
         </button>
       </section>
     </div>

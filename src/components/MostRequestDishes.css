@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#dishesContianer {
+    max-height: 640px;
+    width: 100%;
+}
+
+#firstDish {
+    background-color: #A00000;
+    height: 100%;
+    width: 522px;
+}
+
+#secondDish {
+    background-color: #616161;
+    height: 100%;
+    width: 522px;
+}
+
+#thirdDish {
+    background-color: #A00000;
+    height: 100%;
+    width: 522px;
+}
