@@ -1,6 +1,7 @@
 import "./ReservePage.css";
 import React from "react";
 import Header from "../components/Header";
+import BookingForm from "../components/BookingForm";
 import MostRequestDishes from "../components/MostRequestDishes";
 import Footer from "../components/Footer";
 
@@ -16,6 +17,7 @@ const ReservePage: React.FC<ReservePageProps> = ({ title1, title2 }) => {
       <div className="titleContainer">
         <h1 className="text1">{title1}</h1>
       </div>
+      <BookingForm />
       <div id="titleContainer">
         <h1 className="text1">{title2}</h1>
       </div>
@@ -27,6 +29,7 @@ const ReservePage: React.FC<ReservePageProps> = ({ title1, title2 }) => {
         ThirdDishTitle="Red shelfish"
         ThirdDishText="The red shellfish, which is three to four times the size of a typical red shellfish, comes from the Buzen Sea. It is said that the size and taste of this fruit are on a whole other level because it grows in coastal areas along mountains that are rich in nutrients."
       />
+      
       <Footer />
     </>
   );
