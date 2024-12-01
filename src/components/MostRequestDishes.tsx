@@ -22,29 +22,29 @@ const MostRequestDishes: React.FC<MostRequestDishesProps> = ({
     <section id="dishesContainer">
       <div id="firstDish">
         <div className="imageDishContainer">
-            <img src=""/>
+          <img src="../../public/eel_dish.svg" />
         </div>
         <div className="textDishContainer">
-            <h1>{firstDishTitle}</h1>
-            <a>{firstDishText}</a>
+          <h1>{firstDishTitle}</h1>
+          <a>{firstDishText}</a>
         </div>
       </div>
       <div id="secondDish">
         <div className="imageDishContainer">
-            <img />
+          <img src="../../public/tigerprawns_dish.svg" />
         </div>
         <div className="textDishContainer">
-            <h1>{secondDishTitle}</h1>
-            <a>{secondDishText}</a>
+          <h1>{secondDishTitle}</h1>
+          <a>{secondDishText}</a>
         </div>
       </div>
       <div id="thirdDish">
         <div className="imageDishContainer">
-            <img />
+          <img src="../../public/shellfish_dish.svg" />
         </div>
         <div className="textDishContainer">
-            <h1>{ThirdDishTitle}</h1>
-            <a>{ThirdDishText}</a>
+          <h1>{ThirdDishTitle}</h1>
+          <a>{ThirdDishText}</a>
         </div>
       </div>
     </section>
