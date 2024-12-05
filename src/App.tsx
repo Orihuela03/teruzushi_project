@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
 import UbicationPage from "./pages/UbicationPage";
 import AboutTheChef from "./pages/AboutTheChef";
-import ReservePage from "./pages/reservePage";
+import ReservePage from "./pages/ReservePage";
 
 function App() {
   return (
@@ -23,7 +23,7 @@ function App() {
           />
           <Route
             path="/Reserve"
-            element={<ReservePage title1="Reservation" title2="Most Request Dishes" />}
+            element={<ReservePage title1="Reservation" title2="Most Requested Dishes" />}
           />
         </Routes>
       </Router>

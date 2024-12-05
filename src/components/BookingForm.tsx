@@ -1,159 +1,100 @@
-import React, { useState, ChangeEvent, FormEvent } from "react";
-
-interface FormData {
-  nombre: string;
-  telefono: string;
-  email: string;
-  comensales: number;
-  restaurante: string;
-  fecha: string;
-  hora: string;
-}
+import React, { useState } from "react";
+import axios from "axios";
 
 const BookingForm: React.FC = () => {
-  const [formData, setFormData] = useState<FormData>({
-    nombre: "",
-    telefono: "",
-    email: "",
-    comensales: 1,
-    restaurante: "Teruzushi",
-    fecha: "",
-    hora: "",
+  const [formData, setFormData] = useState({
+    CustomerName: "",
+    CustomerEmail: "",
+    CustomerPhone: "",
+    NumberOfEaters: 1,
+    ReservationDate: "",
   });
 
-  const handleChange = (
-    e: ChangeEvent<HTMLInputElement | HTMLSelectElement>
-  ) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
+
+    setFormData((prev) => ({
+      ...prev,
+      [name]: name === "NumberOfEaters" ? parseInt(value, 10) : value, // Convertir a entero si es NumberOfEaters
     }));
   };
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
     try {
-      const response = await fetch("/teruzushi/booking", {
-        method: "POST",
+      const response = await axios.post("http://localhost:8080/teruzushiapi/booking", formData, {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
       });
-
-      if (response.ok) {
-        alert("Reserva realizada con éxito!");
-        setFormData({
-          nombre: "",
-          telefono: "",
-          email: "",
-          comensales: 1,
-          restaurante: "Teruzushi",
-          fecha: "",
-          hora: "",
-        });
-      } else {
-        alert("Hubo un problema al realizar la reserva.");
-      }
+      alert("Reserva enviada con éxito!");
+      console.log(response.data);
     } catch (error) {
-      console.error("Error al enviar el formulario:", error);
-      alert("Error al enviar la solicitud. Intenta nuevamente.");
+      console.error("Error al enviar la reserva:", error);
+      alert("Hubo un error al enviar la reserva.");
     }
   };
 
   return (
     <form onSubmit={handleSubmit}>
       <div>
-        <label htmlFor="nombre">Name:</label>
+        <label htmlFor="CustomerName">Nombre:</label>
         <input
           type="text"
-          id="nombre"
-          name="nombre"
-          value={formData.nombre}
-          onChange={handleChange}
+          id="CustomerName"
+          name="CustomerName"
+          value={formData.CustomerName}
+          onChange={handleInputChange}
           required
         />
       </div>
-
       <div>
-        <label htmlFor="telefono">Phone Number:</label>
-        <input
-          type="tel"
-          id="telefono"
-          name="telefono"
-          value={formData.telefono}
-          onChange={handleChange}
-          required
-        />
-      </div>
-
-      <div>
-        <label htmlFor="email">Email:</label>
+        <label htmlFor="CustomerEmail">Correo Electrónico:</label>
         <input
           type="email"
-          id="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
+          id="CustomerEmail"
+          name="CustomerEmail"
+          value={formData.CustomerEmail}
+          onChange={handleInputChange}
           required
         />
       </div>
-
       <div>
-        <label htmlFor="comensales">Numbers of Eaters:</label>
+        <label htmlFor="CustomerPhone">Teléfono:</label>
+        <input
+          type="tel"
+          id="CustomerPhone"
+          name="CustomerPhone"
+          value={formData.CustomerPhone}
+          onChange={handleInputChange}
+          required
+        />
+      </div>
+      <div>
+        <label htmlFor="NumberOfEaters">Número de comensales:</label>
         <input
           type="number"
-          id="comensales"
-          name="comensales"
-          value={formData.comensales}
-          onChange={handleChange}
-          min="1"
+          id="NumberOfEaters"
+          name="NumberOfEaters"
+          value={formData.NumberOfEaters}
+          onChange={handleInputChange}
+          min={1}
+          max={8}
           required
         />
       </div>
-
       <div>
-        <label htmlFor="restaurante">Restaurant:</label>
-        <select
-          id="restaurante"
-          name="restaurante"
-          value={formData.restaurante}
-          onChange={handleChange}
-          required
-        >
-          <option value="Teruzushi">Teruzushi</option>
-          <option value="TeruzushiJP">TeruzushiJP</option>
-          <option value="Teruzushi Riyadh">Teruzushi Riyadh</option>
-        </select>
-      </div>
-
-      <div>
-        <label htmlFor="fecha">Date:</label>
+        <label htmlFor="ReservationDate">Fecha de la reserva:</label>
         <input
           type="date"
-          id="fecha"
-          name="fecha"
-          value={formData.fecha}
-          onChange={handleChange}
+          id="ReservationDate"
+          name="ReservationDate"
+          value={formData.ReservationDate}
+          onChange={handleInputChange}
           required
         />
       </div>
-
-      <div>
-        <label htmlFor="hora">Hour:</label>
-        <input
-          type="time"
-          id="hora"
-          name="hora"
-          value={formData.hora}
-          onChange={handleChange}
-          required
-        />
-      </div>
-
-      <button type="submit">Submmit</button>
+      <button type="submit">Enviar</button>
     </form>
   );
 };
