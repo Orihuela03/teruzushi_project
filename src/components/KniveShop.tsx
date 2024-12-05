@@ -23,7 +23,7 @@ const KniveShop: React.FC<kniveShopProps> = ({
           <a id="subtext1">{subtitle}</a>
         </div>
         <button>
-          <a href="#">{buttonContent}</a>
+          <a href="https://teruknives.com">{buttonContent}</a>
         </button>
       </section>
       <section id="logoContainer">

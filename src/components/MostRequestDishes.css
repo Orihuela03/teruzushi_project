@@ -6,7 +6,7 @@ body {
 }
 
 #dishesContainer {
-    max-height: 40rem;
+    height: 100%;
     margin-bottom: 2.5rem;
     margin-top: 2.5rem;
 }

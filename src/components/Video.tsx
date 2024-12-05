@@ -4,7 +4,7 @@ import "./Video.css";
 const Video: React.FC = () => {
   return (
     <div id="videoContainer">
-      <section>
+      <section id="videoCard">
         <video src="../../public/TERUZUSHI.mp4" autoPlay loop muted />
       </section>
 

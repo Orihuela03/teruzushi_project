@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap");
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#allContentContainer {
+    width: 100%;
+    height: 700px;
+    display: flex;
+    gap: 80px;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    margin-top: -40px;
+    margin-bottom: -25px;
+}
+
+#formContainer {
+    width: 580px;
+    height: 480px;
+    background-color: #616161;
+    border-radius: 28px;
+    border: 30px solid #A00000;
+    margin-left: 20px;
+}
+
+.form {
+    margin-left: -10px;
+    font-family: "Josefine Sans";
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin-top: 20px;
+    justify-content: center;
+    align-content: center;
+    width: 500px;
+    font-size: 16px;
+}
+
+.form input {
+    width: 500px;
+    height: 30px;
+}
+
+#buttonForm {
+    margin-left: 165px;
+    margin-top: 30px;
+}
+
+#imageFormContainer {
+    width: 750px;
+    height: 540px;
+    background-color: #616161;
+    border-radius: 28px;
+    display: flex;
+    align-items: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+#imageForm {
+    width: 900px;
+    height: 450px;
+    border-radius: 28px;
+}
