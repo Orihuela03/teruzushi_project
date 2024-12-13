@@ -18,7 +18,7 @@ const BookingForm: React.FC = () => {
 
     setFormData((prev) => ({
       ...prev,
-      [name]: name === "NumberOfEaters" ? parseInt(value, 10) : value, // Convertir a entero si es NumberOfEaters
+      [name]: name === "NumberOfEaters" ? parseInt(value, 10) : value,
     }));
   };
 

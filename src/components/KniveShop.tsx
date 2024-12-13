@@ -15,7 +15,7 @@ const KniveShop: React.FC<kniveShopProps> = ({
   return (
     <div id="shopContainer">
       <section id="imageContainer">
-        <img id="imageShop" src="../../public/image_shop.svg" />
+        <img id="imageShop" src="../../public/image_shop.svg" alt="knive store image"/>
       </section>
       <section id="buttonContainer">
         <div id="textContainer">
@@ -27,7 +27,7 @@ const KniveShop: React.FC<kniveShopProps> = ({
         </button>
       </section>
       <section id="logoContainer">
-        <img id="logoShop" src="../../public/logo_shop.svg" />
+        <img id="logoShop" src="../../public/logo_shop.svg" alt="logo knive store" />
       </section>
     </div>
   );

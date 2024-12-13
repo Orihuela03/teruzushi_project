@@ -22,7 +22,7 @@ const MostRequestDishes: React.FC<MostRequestDishesProps> = ({
     <section id="dishesContainer">
       <div id="firstDish">
         <div className="imageDishContainer">
-          <img src="../../public/eel_dish.svg" />
+          <img src="../../public/eel_dish.svg" alt="dish photo" />
         </div>
         <div className="textDishContainer">
           <h1>{firstDishTitle}</h1>
@@ -31,7 +31,7 @@ const MostRequestDishes: React.FC<MostRequestDishesProps> = ({
       </div>
       <div id="secondDish">
         <div className="imageDishContainer">
-          <img src="../../public/tigerprawns_dish.svg" />
+          <img src="../../public/tigerprawns_dish.svg" alt="dish photo" />
         </div>
         <div className="textDishContainer">
           <h1>{secondDishTitle}</h1>
@@ -40,7 +40,7 @@ const MostRequestDishes: React.FC<MostRequestDishesProps> = ({
       </div>
       <div id="thirdDish">
         <div className="imageDishContainer">
-          <img src="../../public/shellfish_dish.svg" />
+          <img src="../../public/shellfish_dish.svg" alt="dish photo" />
         </div>
         <div className="textDishContainer">
           <h1>{ThirdDishTitle}</h1>

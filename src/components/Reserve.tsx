@@ -15,7 +15,7 @@ const Reserve: React.FC<ReserveProps> = ({
   return (
     <div id="reserveContainer">
       <section id="redSquare">
-        <img id="logoRedSquare" src="../../public/logo.svg" />
+        <img id="logoRedSquare" src="../../public/logo.svg" alt="logo Teruzushi" />
       </section>
       <section id="reserveSection">
         <div id="textContainer">

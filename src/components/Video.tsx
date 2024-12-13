@@ -9,7 +9,7 @@ const Video: React.FC = () => {
       </section>
 
       <section>
-        <img id="logoVideo" src="../../public/logo-main.svg" />
+        <img id="logoVideo" src="../../public/logo-main.svg" alt="Teruzushi Logo" />
       </section>
     </div>
   );

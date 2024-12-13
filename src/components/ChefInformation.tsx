@@ -20,8 +20,8 @@ const ChefInformation: React.FC<ChefInformationProps> = ({
           </div>
         </div>
         <div id="imageSquare">
-          <img src="../../public/happy_chef.svg" />
-          <img src="../../public/chef_photo.svg" />
+          <img src="../../public/happy_chef.svg" alt="Imagen no disponible" />
+          <img src="../../public/chef_photo.svg" alt="Imagen no disponible" />
         </div>
       </div>
     </section>
