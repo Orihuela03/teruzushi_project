@@ -109,9 +109,9 @@ const BookingForm: React.FC = () => {
             />
           </div>
           <div className="form">
-            <label htmlFor="Date">Date and Time</label>
+            <label htmlFor="Date">Date</label>
             <input
-              type="datetime-local"
+              type="date"
               id="Date"
               name="Date"
               value={formData.Date}
@@ -133,7 +133,7 @@ const BookingForm: React.FC = () => {
                 <option key={restaurant.id} value={restaurant.id}>
                   {restaurant.name}
                 </option>
-              ))} 
+              ))}
             </select>
           </div>
           <button type="submit" id="buttonForm">
