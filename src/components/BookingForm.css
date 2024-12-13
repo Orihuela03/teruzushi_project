@@ -42,12 +42,17 @@ body {
 
 .form input {
     width: 500px;
+    height: 20px;
+}
+
+.form select {
+    width: 505px;
     height: 30px;
 }
 
 #buttonForm {
     margin-left: 165px;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 #imageFormContainer {

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./BookingForm.css";
 import axios from "axios";
 
@@ -8,8 +8,24 @@ const BookingForm: React.FC = () => {
     CustomerEmail: "",
     CustomerPhone: "",
     NumberOfEaters: 1,
-    ReservationDate: "",
+    Date: "",
+    RestaurantId: "",
   });
+
+  const [restaurants, setRestaurants] = useState([]);
+
+  useEffect(() => {
+    const fetchRestaurants = async () => {
+      try {
+        const response = await axios.get("http://localhost:8080/teruzushiapi/restaurant");
+        setRestaurants(response.data);
+      } catch (error) {
+        console.error("Error fetching restaurants:", error);
+      }
+    };
+
+    fetchRestaurants();
+  }, []);
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
@@ -58,7 +74,7 @@ const BookingForm: React.FC = () => {
             />
           </div>
           <div className="form">
-            <label htmlFor="CustomerEmail">Contact Email</label>
+            <label htmlFor="CustomerEmail">Email</label>
             <input
               type="email"
               id="CustomerEmail"
@@ -69,7 +85,7 @@ const BookingForm: React.FC = () => {
             />
           </div>
           <div className="form">
-            <label htmlFor="CustomerPhone">Contact Phone</label>
+            <label htmlFor="CustomerPhone">Phone</label>
             <input
               type="tel"
               id="CustomerPhone"
@@ -93,15 +109,32 @@ const BookingForm: React.FC = () => {
             />
           </div>
           <div className="form">
-            <label htmlFor="ReservationDate">Reserve Date</label>
+            <label htmlFor="Date">Date and Time</label>
             <input
-              type="date"
-              id="ReservationDate"
-              name="ReservationDate"
-              value={formData.ReservationDate}
+              type="datetime-local"
+              id="Date"
+              name="Date"
+              value={formData.Date}
               onChange={handleInputChange}
               required
             />
+          </div>
+          <div className="form">
+            <label htmlFor="RestaurantId">Select Restaurant</label>
+            <select
+              id="RestaurantId"
+              name="RestaurantId"
+              value={formData.RestaurantId}
+              onChange={handleInputChange}
+              required
+            >
+              <option value="">Choose a restaurant</option>
+              {restaurants.map((restaurant: any) => (
+                <option key={restaurant.id} value={restaurant.id}>
+                  {restaurant.name}
+                </option>
+              ))} 
+            </select>
           </div>
           <button type="submit" id="buttonForm">
             Send Reserve
@@ -109,7 +142,7 @@ const BookingForm: React.FC = () => {
         </form>
       </section>
       <section id="imageFormContainer">
-        <img src="../../public/restaurant_photo.svg"  id="imageForm"/>
+        <img src="../../public/restaurant_photo.svg" id="imageForm" alt="Restaurant" />
       </section>
     </section>
   );
