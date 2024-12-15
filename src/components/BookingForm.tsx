@@ -4,12 +4,12 @@ import axios from "axios";
 
 const BookingForm: React.FC = () => {
   const [formData, setFormData] = useState({
-    CustomerName: "",
-    CustomerEmail: "",
-    CustomerPhone: "",
-    NumberOfEaters: 1,
-    Date: "",
-    RestaurantId: "",
+    customerName: "",
+    customerEmail: "",
+    customerPhone: "",
+    numberOfEaters: 1,
+    date: "",
+    restaurantId: "",
   });
 
   const [restaurants, setRestaurants] = useState([]);
@@ -17,7 +17,7 @@ const BookingForm: React.FC = () => {
   useEffect(() => {
     const fetchRestaurants = async () => {
       try {
-        const response = await axios.get("http://localhost:8080/teruzushiapi/restaurant");
+        const response = await axios.get("http://localhost:8080/api/bookings");
         setRestaurants(response.data);
       } catch (error) {
         console.error("Error fetching restaurants:", error);
@@ -34,16 +34,25 @@ const BookingForm: React.FC = () => {
 
     setFormData((prev) => ({
       ...prev,
-      [name]: name === "NumberOfEaters" ? parseInt(value, 10) : value,
+      [name]: name === "numberOfEaters" ? parseInt(value, 10) : value,
     }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
+      const bookingData = {
+        customerName: formData.customerName,
+        customerEmail: formData.customerEmail,
+        customerPhone: formData.customerPhone,
+        numberOfEaters: formData.numberOfEaters,
+        date: formData.date,
+        restaurant: { id: formData.restaurantId },
+      };
+
       const response = await axios.post(
-        "http://localhost:8080/teruzushiapi/booking",
-        formData,
+        "http://localhost:8080/api/bookings",
+        bookingData,
         {
           headers: {
             "Content-Type": "application/json",
@@ -63,45 +72,45 @@ const BookingForm: React.FC = () => {
       <section id="formContainer">
         <form onSubmit={handleSubmit}>
           <div className="form">
-            <label htmlFor="CustomerName">Name</label>
+            <label htmlFor="customerName">Name</label>
             <input
               type="text"
-              id="CustomerName"
-              name="CustomerName"
-              value={formData.CustomerName}
+              id="customerName"
+              name="customerName"
+              value={formData.customerName}
               onChange={handleInputChange}
               required
             />
           </div>
           <div className="form">
-            <label htmlFor="CustomerEmail">Email</label>
+            <label htmlFor="customerEmail">Email</label>
             <input
               type="email"
-              id="CustomerEmail"
-              name="CustomerEmail"
-              value={formData.CustomerEmail}
+              id="customerEmail"
+              name="customerEmail"
+              value={formData.customerEmail}
               onChange={handleInputChange}
               required
             />
           </div>
           <div className="form">
-            <label htmlFor="CustomerPhone">Phone</label>
+            <label htmlFor="customerPhone">Phone</label>
             <input
               type="tel"
-              id="CustomerPhone"
-              name="CustomerPhone"
-              value={formData.CustomerPhone}
+              id="customerPhone"
+              name="customerPhone"
+              value={formData.customerPhone}
               onChange={handleInputChange}
               required
             />
           </div>
           <div className="form">
-            <label htmlFor="NumberOfEaters">Number of Eaters</label>
+            <label htmlFor="numberOfEaters">Number of Eaters</label>
             <input
               type="number"
-              id="NumberOfEaters"
-              name="NumberOfEaters"
-              value={formData.NumberOfEaters}
+              id="numberOfEaters"
+              name="numberOfEaters"
+              value={formData.numberOfEaters}
               onChange={handleInputChange}
               min={1}
               max={8}
@@ -109,22 +118,22 @@ const BookingForm: React.FC = () => {
             />
           </div>
           <div className="form">
-            <label htmlFor="Date">Date</label>
+            <label htmlFor="date">Date</label>
             <input
               type="date"
-              id="Date"
-              name="Date"
-              value={formData.Date}
+              id="date"
+              name="date"
+              value={formData.date}
               onChange={handleInputChange}
               required
             />
           </div>
           <div className="form">
-            <label htmlFor="RestaurantId">Select Restaurant</label>
+            <label htmlFor="restaurantId">Select Restaurant</label>
             <select
-              id="RestaurantId"
-              name="RestaurantId"
-              value={formData.RestaurantId}
+              id="restaurantId"
+              name="restaurantId"
+              value={formData.restaurantId}
               onChange={handleInputChange}
               required
             >
@@ -142,7 +151,7 @@ const BookingForm: React.FC = () => {
         </form>
       </section>
       <section id="imageFormContainer">
-        <img src="../../public/restaurant_photo.svg" id="imageForm" alt="Restaurant" />
+        <img src="../../public/restaurant_photo.svg" id="imageForm" alt="Restaurant image" />
       </section>
     </section>
   );

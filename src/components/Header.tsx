@@ -25,7 +25,7 @@ const Header: React.FC<HeaderProps> = ({ title1, title2 }) => {
           <img
             id="logoImage"
             src="../../public/h_logo.svg"
-            alt="Logo Teruzushi"
+            alt="Teruzushi Logo"
           />
         </Link>
       </section>

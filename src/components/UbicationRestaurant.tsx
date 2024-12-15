@@ -37,7 +37,7 @@ const UbicationRestaurant: React.FC<UbicationRestaurantProps> = ({
           </div>
         </div>
         <div className="image-container">
-          <img src="../../public/teruzushi_restaurant.svg" alt="Restaurant image"/>
+          <img src="../../public/teruzushi_restaurant.svg" alt="Restaurant Teruzushi image"/>
         </div>
       </section>
       <section id="teruzushiJP">
@@ -55,7 +55,7 @@ const UbicationRestaurant: React.FC<UbicationRestaurantProps> = ({
           </div>
         </div>
         <div className="image-container">
-          <img src="../../public/teruzushiJP_restaurant.svg" alt="Restaurant Image"/>
+          <img src="../../public/teruzushiJP_restaurant.svg" alt="Restaurant TeruzushiJP Image"/>
         </div>
       </section>
       <section id="teruzushiRiyadh">
@@ -73,7 +73,7 @@ const UbicationRestaurant: React.FC<UbicationRestaurantProps> = ({
           </div>
         </div>
         <div className="image-container">
-          <img src="../../public/teruzushiriyadh_restaurant.svg" alt="Restaurant Image" />
+          <img src="../../public/teruzushiriyadh_restaurant.svg" alt="Restaurant TeruzushiRiyadh Image" />
         </div>
       </section>
     </div>
