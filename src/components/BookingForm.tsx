@@ -17,7 +17,7 @@ const BookingForm: React.FC = () => {
   useEffect(() => {
     const fetchRestaurants = async () => {
       try {
-        const response = await axios.get("http://localhost:8080/api/bookings");
+        const response = await axios.get("http://localhost:8080/api/restaurants");
         setRestaurants(response.data);
       } catch (error) {
         console.error("Error fetching restaurants:", error);
