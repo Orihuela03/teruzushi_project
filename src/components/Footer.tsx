@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Footer: React.FC = () => {
   return (
     <footer>
-      <section>
+      <nav>
         <ul id="socialSection">
           <Link to="https://www.facebook.com/p/Teruzushi-61559864859770/">
             <li id="facebookLogo">
@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
             </li>
           </Link>
         </ul>
-      </section>
+      </nav>
     </footer>
   );
 };

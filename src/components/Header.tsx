@@ -10,7 +10,7 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ title1, title2 }) => {
   return (
     <header>
-      <section>
+      <nav>
         <ul id="textSection">
           <li>
             <a href="/Ubication">{title1}</a>
@@ -19,8 +19,8 @@ const Header: React.FC<HeaderProps> = ({ title1, title2 }) => {
             <a href="/AboutTheChef">{title2}</a>
           </li>
         </ul>
-      </section>
-      <section>
+      </nav>
+      <nav>
         <Link to="/">
           <img
             id="logoImage"
@@ -28,7 +28,7 @@ const Header: React.FC<HeaderProps> = ({ title1, title2 }) => {
             alt="Teruzushi Logo"
           />
         </Link>
-      </section>
+      </nav>
     </header>
   );
 };
