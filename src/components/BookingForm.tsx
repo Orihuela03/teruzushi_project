@@ -77,6 +77,7 @@ const BookingForm: React.FC = () => {
               type="text"
               id="customerName"
               name="customerName"
+              placeholder="Insert your name"
               value={formData.customerName}
               onChange={handleInputChange}
               required
@@ -88,6 +89,7 @@ const BookingForm: React.FC = () => {
               type="email"
               id="customerEmail"
               name="customerEmail"
+              placeholder="Insert your email"
               value={formData.customerEmail}
               onChange={handleInputChange}
               required
@@ -99,6 +101,7 @@ const BookingForm: React.FC = () => {
               type="tel"
               id="customerPhone"
               name="customerPhone"
+              placeholder="Insert your phone number"
               value={formData.customerPhone}
               onChange={handleInputChange}
               required
@@ -137,7 +140,6 @@ const BookingForm: React.FC = () => {
               onChange={handleInputChange}
               required
             >
-              <option value="">Choose a restaurant</option>
               {restaurants.map((restaurant: any) => (
                 <option key={restaurant.id} value={restaurant.id}>
                   {restaurant.name}
