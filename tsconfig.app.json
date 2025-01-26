@@ -1,26 +1,30 @@
 {
   "compilerOptions": {
-    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
-    "target": "ES2020",
-    "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "module": "ESNext",
-    "skipLibCheck": true,
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo", // Mantenemos esta opción
+    "target": "ES2020", // Mantenemos ES2020 como objetivo
+    "useDefineForClassFields": true, // Mantenemos esta opción
+    "lib": ["ES2020", "DOM", "DOM.Iterable"], // Mantenemos estas bibliotecas para el navegador
+    "module": "ESNext", // Mantenemos ESNext para compatibilidad con bundlers modernos
+    "skipLibCheck": true, // Mantenemos esta opción
 
     /* Bundler mode */
-    "moduleResolution": "Bundler",
-    "allowImportingTsExtensions": true,
-    "isolatedModules": true,
-    "moduleDetection": "force",
-    "noEmit": true,
-    "jsx": "react-jsx",
+    "moduleResolution": "Bundler", // Mantenemos Bundler para Vite
+    "allowImportingTsExtensions": true, // Mantenemos esta opción
+    "isolatedModules": true, // Mantenemos esta opción
+    "moduleDetection": "force", // Mantenemos esta opción
+    "noEmit": true, // Mantenemos esta opción (si no necesitas emitir archivos JS)
+    "jsx": "react-jsx", // Mantenemos react-jsx para soporte de JSX
 
     /* Linting */
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "strict": true, // Mantenemos esta opción
+    "noUnusedLocals": true, // Mantenemos esta opción
+    "noUnusedParameters": true, // Mantenemos esta opción
+    "noFallthroughCasesInSwitch": true, // Mantenemos esta opción
+    "noUncheckedSideEffectImports": true, // Mantenemos esta opción
+
+    /* Soporte para pruebas */
+    "types": ["vitest/globals"] // Agregamos los tipos de Vitest
   },
-  "include": ["src"]
+  "include": ["src"], // Mantenemos esta opción
+  "exclude": ["node_modules", "dist"] // Excluimos node_modules y dist
 }

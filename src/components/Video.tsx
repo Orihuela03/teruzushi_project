@@ -5,7 +5,7 @@ const Video: React.FC = () => {
   return (
     <div id="videoContainer">
       <section id="videoCard">
-        <video src="../../public/TERUZUSHI.mp4" autoPlay loop muted />
+        <video src="../../public/TERUZUSHI.mp4" autoPlay loop muted data-testid="video-element"/>
       </section>
 
       <section>
